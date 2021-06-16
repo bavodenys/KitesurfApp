@@ -176,7 +176,7 @@ Builder.load_string("""
                         elevation:8
                     
                     MDLabel:
-                        text: "This is an application created by a belgian kitesurfer for kitesurfers in Belgium"
+                        text: "This is an application created by a Belgian kitesurfer for kitesurfers in Belgium"
                         halign: "center"
                     
                                    
