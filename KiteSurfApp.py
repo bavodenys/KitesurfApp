@@ -23,7 +23,7 @@ VlaamseMeetbank = VlaamseMeetbank(username, password)
 Builder.load_string("""
 <HomeScreen>:   
     name:'HomeScreen'
-    NavigationLayout:
+    MDNavigationLayout:
         ScreenManager:
             Screen:
                 BoxLayout:
@@ -71,7 +71,7 @@ Builder.load_string("""
    
 <DataScreen>:   
     name:'DataScreen'
-    NavigationLayout:
+    MDNavigationLayout:
         ScreenManager:
             Screen:
                 BoxLayout:
@@ -164,7 +164,7 @@ Builder.load_string("""
                                 
 <AboutScreen>:   
     name:'AboutScreen'
-    NavigationLayout:
+    MDNavigationLayout:
         ScreenManager:
             Screen:
                 BoxLayout:
@@ -176,7 +176,7 @@ Builder.load_string("""
                         elevation:8
                     
                     MDLabel:
-                        text: "This is an application created by a belgian kitesurfer for kitersurfers in Belgium"
+                        text: "This is an application created by a belgian kitesurfer for kitesurfers in Belgium"
                         halign: "center"
                     
                                    
