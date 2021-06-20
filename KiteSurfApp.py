@@ -31,7 +31,7 @@ Builder.load_string("""
                     MDToolbar:
                         title: 'Belgian Wind'
                         left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
-                        right_action_items: [["language-python", lambda x:app.go_home()]]
+                        right_action_items: [["images/BelgianKitesurfLogo.png", lambda x:app.go_home()]]
                         elevation:8
                     
                     ScrollView:
@@ -79,7 +79,7 @@ Builder.load_string("""
                     MDToolbar:
                         title: 'Belgian Wind'
                         left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
-                        right_action_items: [["language-python", lambda x: app.go_home()]]
+                        right_action_items: [["images/BelgianKitesurfLogo.png", lambda x: app.go_home()]]
                         elevation:8
                         
                     MDLabel:
@@ -172,7 +172,7 @@ Builder.load_string("""
                     MDToolbar:
                         title: 'Belgian Wind'
                         left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
-                        right_action_items: [["language-python", lambda x:app.go_home()]]
+                        right_action_items: [["images/BelgianKitesurfLogo.png", lambda x:app.go_home()]]
                         elevation:8
                     
                     MDLabel:
@@ -238,7 +238,7 @@ class DemoApp(MDApp):
         self.sm.add_widget(HomeScreen(name='HomeScreen'))
         self.sm.add_widget(DataScreen(name='DataScreen'))
         self.sm.add_widget(AboutScreen(name='AboutScreen'))
-        self.theme_cls.primary_palette = "Red"
+        self.theme_cls.primary_palette = "Green"
         # For loop over all locations with wind information and add item
         for location in sorted(Locations):
             self.sm.screens[0].ids["'locations_id'"].add_widget(OneLineListItem(text=location, on_release=self.select_location))
