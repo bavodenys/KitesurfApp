@@ -9,15 +9,16 @@ from MeetnetVlaamseBanken import VlaamseMeetbank
 from GenFunctions import *
 
 # Meetnet Vlaamse Banken login:
-username = 
-password = 
-#password = os.environ.get('MEETBANK_PASS')
+f = open("login.txt", "r")
+login = f.read().split('\n')
+username = login[0]
+password = login[1]
 
 # Make object Vlaamse Meetbank
 VlaamseMeetbank = VlaamseMeetbank(username, password)
 
 # Resize window to smartphone format
-#Window.size = (300, 500)
+Window.size = (300, 500)
 
 
 Builder.load_string("""
@@ -105,7 +106,7 @@ Builder.load_string("""
                                      
                     MDLabel:
                         id:windspeed_id_old
-                        text: 'Wind speed: 10 kt'
+                        text: 'Windspeed: 10 kt'
                         halign: 'center'
                         padding_x: 5
                         padding_y: 5
@@ -127,7 +128,7 @@ Builder.load_string("""
 
                     MDLabel:
                         id:winddirection_id_old
-                        text: 'Wind direction: NNW'
+                        text: 'Winddirection: NNW'
                         halign: 'center'
                         padding_x: 5
                         padding_y: 5  
@@ -176,7 +177,7 @@ Builder.load_string("""
                         elevation:8
                     
                     MDLabel:
-                        text: "This is an application created by a Belgian kitesurfer for kitesurfers in Belgium"
+                        text: "This is an application created by a belgian kitesurfer for kitersurfers in Belgium"
                         halign: "center"
                     
                                    
@@ -284,9 +285,9 @@ class DemoApp(MDApp):
 
         self.sm.current_screen.ids['location_id'].text = obj.text
         self.sm.current_screen.ids['windspeed_id'].value = round(b2)
-        self.sm.current_screen.ids['windspeed_id_old'].text = f"Wind speed: {round(b2)} kt"
+        self.sm.current_screen.ids['windspeed_id_old'].text = f"Windspeed: {round(b2)} kt"
         self.sm.current_screen.ids['winddirection_id'].value = round(a2)
-        self.sm.current_screen.ids['winddirection_id_old'].text = f"Wind direction: {convert_to_winddirection(a2)}"
+        self.sm.current_screen.ids['winddirection_id_old'].text = f"Winddirection: {convert_to_winddirection(a2)}"
 
 if __name__ == "__main__":
     DemoApp().run()
