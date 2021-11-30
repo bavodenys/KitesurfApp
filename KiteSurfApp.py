@@ -9,8 +9,8 @@ from MeetnetVlaamseBanken import VlaamseMeetbank
 from GenFunctions import *
 
 # Meetnet Vlaamse Banken login:
-username = "bavodenys@gmail.com"
-password = 'Kite27Beer!23'
+username = 
+password = 
 #password = os.environ.get('MEETBANK_PASS')
 
 # Make object Vlaamse Meetbank
